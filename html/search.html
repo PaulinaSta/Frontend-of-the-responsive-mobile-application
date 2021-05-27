@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.png" />
+
+    <!-- google-fonts, font-awesome -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500&family=Pattaya&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- style CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+    <!-- logo -->
+    <div class="logo">
+        <a href="../html/index.html" class="logo__text">ToDo</a>
+    </div>
+
+    <!-- content -->
+
+    <div class="content content--center">
+
+        <div class="content__item content__item--focus">
+            <div class="content__head content__head--column content__head--focus">Znajdź zadanie</div>
+            <div class="content__body content__body--form">
+
+                <!-- form -->
+                <form action="#" method="post" class="form">
+
+                    <ul class="form__content">
+
+
+                        <li class="form__element form__element--first form__element--search form__element--remember">
+                            <label for="search" class="form__text">Wyszukaj wg:</label>
+                            <select id="search" name="search" class="form__select-list">
+                                <option value="keywords" class="form__select-element">Słowa kluczowe</option>
+                                <option value="date" class="form__select-element">Data</option>
+                            </select>
+
+                        </li>
+
+                        <li class="form__element form__element--second">
+                            <label for="task"><i class="fas fa-briefcase form__icon"></i></label>
+                            <input type="text" placeholder="Słowa kluczowe" name="task" class="form__input" required
+                                autocomplete="off">
+                        </li>
+
+                        <li class="form__element form__element--third">
+                            <label for="date"><i class="fas fa-calendar-check form__icon"></i></label>
+                            <input type="date" placeholder="Data" name="date" class="form__input" required
+                                autocomplete="off">
+                        </li>
+
+                        <li class="form__element">
+                            <button type="submit" class="form__button form__button--add">Szukaj</button>
+                        </li>
+
+                    </ul>
+
+                </form>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- navigation -->
+    <div class="navbar">
+
+        <ul class="navbar__items">
+            <li class="navbar__item">
+                <a href="../html/index.html" class="navbar__link"><i class="fas fa-home"></i></a>
+            </li>
+            <li class="navbar__item">
+                <a href="../html/list.html" class="navbar__link"><i class="fas fa-tasks"></i></a></a>
+            </li>
+            <li class="navbar__item"><a href="../html/add.html" class="navbar__link"><i class="fas fa-plus"></i></a>
+            </li>
+            <li class="navbar__item">
+                <a href="../html/search.html" class="navbar__link"><i class="fas fa-search"></i></a>
+            </li>
+            <li class="navbar__item">
+                <a href="../html/account.html" class="navbar__link"><i class="fas fa-user-edit"></i></a>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+
+    <script>
+
+        const listRow = document.querySelector('.list__row');
+        const square = document.querySelector('.fa-square');
+        const checkSquare = document.querySelector('.fa-check-square');
+
+        listRow.addEventListener('click', function () {
+            square.classList.toggle('checkbox--active');
+            checkSquare.classList.toggle('checkbox--active');
+        });
+
+    </script>
+
+</body>
+
+</html>

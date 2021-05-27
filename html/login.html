@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.png" />
+
+    <!-- google-fonts, font-awesome -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500&family=Pattaya&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- style CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+    <!-- logo -->
+    <div class="logo logo--form">
+        <p class="logo__text logo__text--form">ToDo</p>
+    </div>
+
+
+    <!-- content -->
+    <div class="content content--center content--form">
+
+        <div class="content__item content__item--form">
+            <div class="content__head content__head--form content__head--focus">Logowanie</div>
+            <div class="content__body content__body--form">
+
+                <!-- form -->
+                <form action="#" method="post" class="form">
+
+                    <ul class="form__content">
+                        <li class="form__element form__element--first">
+                            <label for="email"><i class="fas fa-at form__icon"></i></label>
+                            <input type="email" placeholder="E-mail" name="user-email" class="form__input" required>
+                        </li>
+
+                        <li class="form__element form__element--second">
+                            <label for="password"><i class="fas fa-lock form__icon"></i></label>
+                            <input type="password" placeholder="Hasło" name="user-password" class="form__input"
+                                required>
+                        </li>
+
+                        <li class="form__element form__element--remember">
+                            <label class="form__text">Zapamiętaj</label>
+                            <input type="checkbox" checked="checked" name="remember"
+                                class="form__default-checkbox"><span class="form__checkbox"><i class="far fa-square checkbox--active"></i><i class="fas fa-check-square"></i></span>
+                        </li>
+
+                        <li class="form__element">
+                            <button type="submit" class="form__button">Zaloguj</button>
+                        </li>
+
+
+                        <li class="form__element">
+                            <label class="form__text"><a href="#" class="form__link">Przywróć hasło</a></label>
+                        </li>
+
+
+                        <li class="form__element form__element--last">
+                            <label class="form__text"><a href="#" class="form__link">Załóż konto</a></label>
+                        </li>
+                    </ul>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        const checkbox = document.querySelector('.form__checkbox');
+        const square = document.querySelector('.fa-square');
+        const checkSquare = document.querySelector('.fa-check-square');
+
+        checkbox.addEventListener('click', function () {
+            square.classList.toggle('checkbox--active');
+            checkSquare.classList.toggle('checkbox--active');
+        });
+
+    </script>
+
+</body>
+
+</html>
