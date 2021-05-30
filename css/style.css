@@ -26,10 +26,10 @@ body {
     font-weight: 400;
     min-height: 100vh;
     color: #333;
-    /* background-image: url(../img/bg.png); */
+    background-image: url(../img/bg.png);
     background-size: 30px;
     background-position: center;
-    /* background-image: linear-gradient(#ffffff, #E5F2C980); */
+    background-image: linear-gradient(#ffffff, #d9f2b3);
 }
 
 body,
@@ -147,10 +147,12 @@ button {
 }
 
 .content__button {
-    background-color: #D9F2B3;
+    /* background-color: #D9F2B3; */
+    background-color: #ffffff;
     /* border-radius: 10px; */
     line-height: 50px;
-    color: #333;
+    /* color: #333; */
+    color: #84BF04;
     font-weight: 500;
     border: none;
     cursor: pointer;
